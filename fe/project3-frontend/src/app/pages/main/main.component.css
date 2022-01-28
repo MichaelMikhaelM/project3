@@ -1,0 +1,23 @@
+#search {
+	width: 100%;
+}
+
+#searchInput {
+	flex-grow: 1;
+	background: var(--theme-color-2);
+}
+
+#searchButton {
+	height: 100%;
+	background: var(--theme-color-2);
+}
+
+#products {
+	flex-wrap: wrap;
+}
+
+#new-product {
+	position: fixed;
+	bottom: 5%;
+	right: 5%;
+}

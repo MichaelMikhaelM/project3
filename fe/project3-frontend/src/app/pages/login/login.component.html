@@ -1,0 +1,21 @@
+<div class = "formContainer flexColumn largeGap">
+	<p class = "extraLargeFont">Login</p>
+	
+	<div class = "flexColumnLeft mediumGap">
+		<p class = "mediumFont">Username</p>
+		
+		<input id = "username" [(ngModel)] = "identifierInput" (keydown) = "onKeyDown ($event);" class = "foregroundElement mediumFont" />
+	</div>
+	
+	<div class = "flexColumnLeft mediumGap">
+		<p class = "mediumFont">Password</p>
+		
+		<input id = "password" [(ngModel)] = "passwordInput" (keydown) = "onKeyDown ($event);" class = "foregroundElement  mediumFont" type = "password" />
+	</div>
+	
+	<p *ngIf = "errorMessage" class = "mediumFont errorMessage" id = "errorMessage">{{ errorMessage }}</p>
+	
+	<button (click) = "login ();" class = "foregroundElement mediumFont" id = "login-btn">Login</button>
+	
+	<a routerLink = "/register" class = "mediumFont" id = "register-btn">Register</a>
+</div>

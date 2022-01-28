@@ -1,0 +1,39 @@
+<div class = "formContainer flexColumn largeGap">
+	<p class = "extraLargeFont">Register</p>
+	
+	<div class = "flexColumnLeft mediumGap">
+		<p class = "mediumFont">First Name</p>
+		
+		<input id = "firstname" [(ngModel)] = "firstNameInput" (keydown) = "onKeyDown ($event);" class = "foregroundElement mediumFont" />
+	</div>
+	
+	<div class = "flexColumnLeft mediumGap">
+		<p class = "mediumFont">Last Name</p>
+		
+		<input id = "lastname" [(ngModel)] = "lastNameInput" (keydown) = "onKeyDown ($event);" class = "foregroundElement mediumFont" />
+	</div>
+	
+	<div class = "flexColumnLeft mediumGap">
+		<p class = "mediumFont">Email</p>
+		
+		<input id = "email" [(ngModel)] = "emailInput" (keydown) = "onKeyDown ($event);" class = "foregroundElement mediumFont" type = "email" />
+	</div>
+	
+	<div class = "flexColumnLeft mediumGap">
+		<p class = "mediumFont">Username</p>
+		
+		<input id = "username" [(ngModel)] = "usernameInput" (keydown) = "onKeyDown ($event);" class = "foregroundElement mediumFont" />
+	</div>
+	
+	<div class = "flexColumnLeft mediumGap">
+		<p class = "mediumFont">Password</p>
+		
+		<input id = "password"[(ngModel)] = "passwordInput" (keydown) = "onKeyDown ($event);" class = "foregroundElement mediumFont" type = "password" />
+	</div>
+	
+	<p *ngIf = "errorMessage" class = "mediumFont errorMessage">{{ errorMessage }}</p>
+	
+	<button (click) = "register ();" class = "foregroundElement mediumFont" id = "register-btn">Register</button>
+	
+	<a routerLink = "/login" class = "mediumFont" id = "login-btn">Login</a>
+</div>

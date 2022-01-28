@@ -1,0 +1,43 @@
+#header {
+	width: 100vw;
+	height: 7.5vh;
+	padding: 10px 30px;
+	box-sizing: border-box;
+	background: var(--theme-color-2);
+	justify-content: space-between;
+}
+
+#header > a:first-child {
+	font-family: Mea Culpa;
+}
+
+#header a {
+	color: var(--theme-color-4);
+}
+
+#cart-btn {
+	cursor: pointer;
+	outline: none;
+}
+
+@media screen and (min-width: 650px) {
+	#mobile-view {
+		display: none;
+	}
+
+	#desktop-view {
+		display: inherit;
+		font-family: Mea Culpa;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	#mobile-view {
+		display: inherit;
+		font-family: Mea Culpa;
+	}
+	
+	#desktop-view {
+		display: none;
+	}
+}

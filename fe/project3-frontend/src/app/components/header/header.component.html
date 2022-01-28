@@ -1,0 +1,26 @@
+<div id = "header" class = "flexLeft">
+	<a routerLink = "/" class = "extraLargeFont flex" id="desktop-view">Revature Courseware Cornucopia</a>
+	<a routerLink = "/" class = "extraLargeFont flex" id="mobile-view">RCC</a>
+	
+	<div class = "flex mediumGap">
+		<div *ngIf = "dataService.user.username" class = "flex largeGap">
+			<p>{{ dataService.user.firstName }} {{ dataService.user.lastName }}</p>
+			
+			<div id = "cart-btn" class = "flex smallGap" routerLink = "/cart">
+				<p>🛒</p>
+				
+				<p>{{ dataService.user.cart.length }}</p>
+			</div>
+			
+			<a id="logout-btn" (click) = "logout ();">Logout</a>
+		</div>
+		
+		<div *ngIf = "!dataService.user.username && router.url !== '/login' && router.url !== '/register'" class = "flex largeGap">
+			<a id="register-btn" routerLink = "/register">Register</a>
+			
+			<a id="login-btn" routerLink = "/login">Login</a>
+		</div>
+		
+		<a (click) = "setDarkTheme (!darkTheme);">{{ darkTheme ? "🌙" : "☀️" }}</a>
+	</div>
+</div>

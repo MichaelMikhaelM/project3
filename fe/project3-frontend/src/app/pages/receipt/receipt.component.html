@@ -1,0 +1,17 @@
+<div class = "flexColumn mediumGap">
+	<p class = "largeFont">Transaction ID: {{ transaction.id }}</p>
+	
+	<p class = "largeFont">Total: {{ transaction.total | currency }}</p>
+	
+	<div class = "flexColumnRight smallGap">
+		<p class = "fullWidth largeFont">Items:</p>
+		
+		<div *ngFor = "let cartItem of transaction.items" class = "flex extraLargeGap">
+			<p class = "largeFont">{{ cartItem.product.name }}</p>
+			
+			<p class = "largeFont">Quantity: {{ cartItem.quantity }}</p>
+			
+			<p class = "largeFont">Total: {{ (cartItem.product.salePrice || cartItem.product.price) * cartItem.quantity | currency }}</p>
+		</div>
+	</div>
+</div>

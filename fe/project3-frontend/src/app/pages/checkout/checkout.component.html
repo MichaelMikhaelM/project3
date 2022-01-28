@@ -1,0 +1,189 @@
+<p class = "extraLargeFont">Checkout</p>
+
+<div class = "formContainer flexColumn largeGap">
+	<p class = "largeFont">Shipping Address</p>
+	
+	<div class = "fullWidth flexColumnLeft largeGap">
+		<div class = "fullWidth flexColumnLeft smallGap">
+			<p class = "mediumFont">Email</p>
+			
+			<input class = "fullWidth foregroundElement mediumFont" type = "email" />
+		</div>
+		
+		<div class = "fullWidth flex smallGap">
+			<div class = "fullWidth flexColumnLeft smallGap">
+				<p class = "mediumFont">First Name</p>
+				
+				<input class = "fullWidth foregroundElement mediumFont" />
+			</div>
+			
+			<div class = "fullWidth flexColumnLeft smallGap">
+				<p class = "mediumFont">Last Name</p>
+				
+				<input class = "fullWidth foregroundElement mediumFont" />
+			</div>
+		</div>
+		
+		<div class = "fullWidth flexColumnLeft smallGap">
+			<p class = "mediumFont">Address</p>
+			
+			<input class = "fullWidth foregroundElement mediumFont" placeholder = "1234 Main St" />
+			
+			<input class = "fullWidth foregroundElement mediumFont" placeholder = "Apartment, studio, or floor" />
+		</div>
+		
+		<div class = "flex smallGap">
+			<div class = "fullWidth flexColumnLeft smallGap">
+				<p class = "mediumFont">City</p>
+				
+				<input class = "fullWidth foregroundElement mediumFont" />
+			</div>
+			
+			<div class = "fullWidth flexColumnLeft smallGap">
+				<p class = "mediumFont">State</p>
+				
+				<!-- todo 1? pixel too tall -->
+				<select class = "fullWidth foregroundElement mediumFont">
+					<option class = "mediumFont"></option>
+					
+					<option class = "mediumFont" *ngFor = "let state of states">{{ state.name }}</option>
+				</select>
+			</div>
+			
+			<div class = "fullWidth flexColumnLeft smallGap">
+				<p class = "mediumFont">ZIP</p>
+				
+				<input class = "fullWidth foregroundElement mediumFont">
+			</div>
+		</div>
+		
+		<div class = "flexLeft smallGap">
+			<input class = "mediumFont foregroundElement" type = "checkbox" [(ngModel)] = "hideBillingAddress" />
+			
+			<p class = "mediumFont">Use shipping address as billing address</p>
+		</div>
+	</div>
+</div>
+
+<div *ngIf = "!hideBillingAddress" class = "formContainer flexColumn largeGap">
+	<div class = "flexColumn largeGap">
+		<p class = "largeFont">Billing Address</p>
+		
+		<div class = "fullWidth flexColumnLeft largeGap">
+			<div class = "fullWidth flexColumnLeft smallGap">
+				<p class = "mediumFont">Email</p>
+				
+				<input class = "fullWidth foregroundElement mediumFont" type = "email" />
+			</div>
+			
+			<div class = "fullWidth flex smallGap">
+				<div class = "fullWidth flexColumnLeft smallGap">
+					<p class = "mediumFont">First Name</p>
+					
+					<input class = "fullWidth foregroundElement mediumFont" />
+				</div>
+				
+				<div class = "fullWidth flexColumnLeft smallGap">
+					<p class = "mediumFont">Last Name</p>
+					
+					<input class = "fullWidth foregroundElement mediumFont" />
+				</div>
+			</div>
+			
+			<div class = "fullWidth flexColumnLeft smallGap">
+				<p class = "mediumFont">Address</p>
+				
+				<input class = "fullWidth foregroundElement mediumFont" placeholder = "1234 Main St" />
+				
+				<input class = "fullWidth foregroundElement mediumFont" placeholder = "Apartment, studio, or floor" />
+			</div>
+			
+			<div class = "flex smallGap">
+				<div class = "fullWidth flexColumnLeft smallGap">
+					<p class = "mediumFont">City</p>
+					
+					<input class = "fullWidth foregroundElement mediumFont" />
+				</div>
+				
+				<div class = "fullWidth flexColumnLeft smallGap">
+					<p class = "mediumFont">State</p>
+					
+					<!-- todo 1? pixel too tall -->
+					<select class = "fullWidth foregroundElement mediumFont">
+						<option class = "mediumFont"></option>
+						
+						<option class = "mediumFont" *ngFor = "let state of states">{{ state.name }}</option>
+					</select>
+				</div>
+				
+				<div class = "fullWidth flexColumnLeft smallGap">
+					<p class = "mediumFont">ZIP</p>
+					
+					<input class = "fullWidth foregroundElement mediumFont" type = "tel" inputmode = "numeric">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class = "formContainer flexColumn largeGap">
+	<p class = "largeFont">Payment</p>
+	
+	<div class = "fullWidth flexColumnLeft largeGap">
+		<div class = "fullWidth flexColumnLeft smallGap">
+			<p class = "mediumFont">Card Number</p>
+			
+			<input class = "fullWidth foregroundElement mediumFont" type = "tel" inputmode = "numeric" pattern = "[0-9\s]{13,19}" autocomplete = "cc-number" maxlength = "19" placeholder = "xxxx xxxx xxxx xxxx">
+		</div>
+		
+		<div class = "fullWidth flex smallGap">
+			<div class = "fullWidth flexColumnLeft smallGap">
+				<p class = "mediumFont">First Name</p>
+				
+				<input class = "fullWidth foregroundElement mediumFont" />
+			</div>
+			
+			<div class = "fullWidth flexColumnLeft smallGap">
+				<p class = "mediumFont">Last Name</p>
+				
+				<input class = "fullWidth foregroundElement mediumFont" />
+			</div>
+		</div>
+		
+		<div class = "fullWidth flexColumnLeft smallGap">
+			<p class = "mediumFont">Expiration Date</p>
+			
+			<div class = "fullWidth flex smallGap">
+				<input class = "fullWidth foregroundElement mediumFont" placeholder = "MM" type = "tel" inputmode = "numeric" />
+				
+				<input class = "fullWidth foregroundElement mediumFont" placeholder = "YY" type = "tel" inputmode = "numeric" />
+			</div>
+		</div>
+		
+		<div class = "fullWidth flex smallGap">
+			<div class = "fullWidth flexColumnLeft smallGap">
+				<p class = "mediumFont">CVV</p>
+				
+				<input class = "fullWidth foregroundElement mediumFont" type = "tel" inputmode = "numeric">
+			</div>
+			
+			<div class = "fullWidth flexColumnLeft smallGap">
+				<p class = "mediumFont">ZIP</p>
+				
+				<input class = "fullWidth foregroundElement mediumFont" type = "tel" inputmode = "numeric">
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class = "formContainer largeGap">
+	<div class = "flex smallGap">
+		<p class = "mediumFont">Total:</p>
+		
+		<p class = "mediumFont" id="totalCost" >{{ dataService.cartTotal | currency }}</p>
+	</div>
+	
+	<div class = "cartControls">
+		<button (click) = "checkout ();" class = "cartButton fullWidth mediumFont" type = "button">Confirm Order</button>
+	</div>
+</div>

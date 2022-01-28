@@ -1,0 +1,25 @@
+<div class = "cartItem flex">
+	<div class = "cartItemInfo flexLeft largeGap">
+		<div class = "productImageContainer flex">
+			<img class = "productImage" src = {{cartItem.product.imageUrl}}>
+			
+			<img *ngIf = "cartItem.product.salePrice" class = "saleRibbon" src = "assets/img/saleRibbon.png">
+		</div>
+		
+		<div class = "productInfo flexColumnLeft smallGap">
+			<p class = "mediumFont">{{ cartItem.product.name }}</p>
+			
+			<div class = "flex mediumGap">
+				<p class = "largeFont">{{ (cartItem.product.salePrice ? cartItem.product.salePrice : cartItem.product.price) | currency }}</p>
+				
+				<p *ngIf = "cartItem.product.salePrice" class = "oldPrice largeFont">{{ cartItem.product.price | currency }}</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class = "flex largeGap">
+		<input [(ngModel)] = "cartItem.quantity" (input) = "onQuantityInput ($event);" class = "quantityInput foregroundElement mediumFont" type = "number">
+		
+		<a class = "mediumFont" (click) = "removeFromCart ();">🗑️</a>
+	</div>
+</div>

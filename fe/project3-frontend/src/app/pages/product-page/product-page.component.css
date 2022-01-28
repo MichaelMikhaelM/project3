@@ -1,0 +1,38 @@
+.product {
+	width: 100%;
+	background: var(--theme-color-2);
+	box-sizing: border-box;
+	border-radius: 4px;
+	padding: 15px;
+}
+
+.productImageContainer {
+	width: 100%;
+	height: 320px;
+	position: relative;
+	background: rgba(0, 0, 0, .2);
+}
+
+.productImage {
+	height: 100%;
+	max-width: 100%;
+	object-fit: contain;
+}
+
+.saleRibbon {
+	top: 5px;
+	right: 5px;
+	width: 40px;
+	position: absolute;
+}
+
+.productInfo {
+	width: 100%;
+	padding: 5px 5px 5px 5px;
+	flex-grow: 1;
+	box-sizing: border-box;
+}
+
+#cartMessage {
+	margin: 10px 0;
+}

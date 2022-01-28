@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap');
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	background: var(--theme-color-1);
+}
+
+p, pre, a, label {
+	margin: 0;
+	padding: 0;
+	font-family: Arial;
+	word-wrap: break-word;
+	text-align: center;
+	text-decoration: none;
+	color: var(--theme-color-4);
+}
+
+a {
+	cursor: pointer;
+	outline: none;
+}
+
+button, input, textarea, select {
+	outline: none;
+	border: none;
+	padding: 10px;
+	box-sizing: border-box;
+	background: var(--theme-color-2);
+	color: var(--theme-color-4);
+}
+
+button {
+	cursor: pointer;
+}
+
+.flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flexTop {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.flexLeft {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.flexRight {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.flexColumn {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.flexColumnTop {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.flexColumnLeft {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.flexColumnRight {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+.fullWidth {
+	width: 100%;
+}
+
+.smallGap {
+	gap: 5px;
+}
+
+.mediumGap {
+	gap: 10px;
+}
+
+.largeGap {
+	gap: 15px;
+}
+
+.extraLargeGap {
+	gap: 20px;
+}
+
+.extraSmallFont {
+	font-size: 13px;
+}
+
+.smallFont {
+	font-size: 15px;
+}
+
+.mediumFont {
+	font-size: 18px;
+}
+
+.largeFont {
+	font-size: 20px;
+}
+
+.extraLargeFont {
+	font-size: 33px;
+}
+
+.page {
+	width: 100%;
+	height: 92.5vh;
+	flex-grow: 1;
+	overflow-y: scroll;
+	padding: 20px 10vw;
+	box-sizing: border-box;
+}
+
+.foregroundElement {
+	background: var(--theme-color-3);
+	border: var(--theme-color-3-border);
+}
+
+.errorMessage {
+	color: #F22727;
+}
+
+.formContainer {
+	width: 670px;
+	max-width: 90vw;
+	padding: 15px;
+	background: var(--theme-color-2);
+	box-sizing: border-box;
+	border-radius: 4px;
+}
+
+.oldPrice {
+	color: #AAA;
+	text-decoration: line-through;
+}
+
+.quantityInput {
+	width: 70px;
+}
+
+.cartControls {
+	margin-top: 10px;
+}
+
+.cartButton {
+	background-color: mediumseagreen !important;
+}

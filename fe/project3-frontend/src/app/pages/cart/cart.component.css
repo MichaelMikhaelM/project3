@@ -1,0 +1,19 @@
+#cartItems {
+	width: 100%px;
+	height: 80%;
+}
+
+#cartTotals {
+	width: 300px;
+	padding: 15px;
+	background: var(--theme-color-2);
+	border-radius: 4px;
+}
+
+#cartTotals > div {
+	justify-content: space-between;
+}
+
+#checkout-container{
+	flex-wrap: wrap;
+}

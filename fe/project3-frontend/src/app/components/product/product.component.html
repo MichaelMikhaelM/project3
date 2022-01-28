@@ -1,0 +1,23 @@
+<div routerLink = "/product/{{ product.id }}" id="product#{{product.id}}" class = "product flexColumn mediumGap">
+	<div class = "productImageContainer flex">
+		<img class = "productImage" [ngClass] = "{ 'grayedOut': product.stock < 1 }" src = {{product.imageUrl}}>
+		
+		<img *ngIf = "product.salePrice" [ngClass] = "{ 'grayedOut': product.stock < 1 }" class = "saleRibbon" src = "assets/img/saleRibbon.png">
+		
+		<p *ngIf = "product.stock < 1" class = "outOfStockMessage mediumFont errorMessage">Out of stock!</p>
+	</div>
+	
+	<div class = "productInfo flexColumn smallGap">
+		<p class = "mediumFont">{{ product.name }}</p>
+		
+		<div class = "flex mediumGap">
+			<p class = "largeFont">{{ (product.salePrice ? product.salePrice : product.price) | currency }}</p>
+			
+			<p *ngIf = "product.salePrice" class = "oldPrice largeFont">{{ product.price | currency }}</p>
+		</div>
+		
+		<div class = "flex">
+			<p class = "productDescription smallFont">{{ product.description }}</p>
+		</div>
+	</div>
+</div>
